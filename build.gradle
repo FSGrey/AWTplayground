@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application' // Add this line
+}
+
+application { // Add this section – it identifies which class contains the entry point to the program which is always a method called main
+    mainClass='org.UIPrimatives.Main'
+}
+
+group 'org.graphicPrimatives'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
