@@ -1,4 +1,8 @@
 package org.UIPrimatives;
+import shapes.Circle;
+import shapes.Rect;
+import shapes.Square;
+
 import java.awt.*;
 import java.awt.event.*;
 

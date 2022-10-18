@@ -1,4 +1,4 @@
-package org.UIPrimatives;
+package shapes;
 
 import java.awt.*;
 
