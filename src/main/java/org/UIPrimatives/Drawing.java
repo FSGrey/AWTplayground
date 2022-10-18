@@ -19,16 +19,26 @@ public class Drawing extends Canvas {
 
     // constructor
     public Drawing(){
-        f = new Frame("le window");
-        f.add(this); // Adds the Canvas to the Frame
-        f.setLayout(null); // Stops the frame from trying to layout contents
-        f.setSize(400, 400); // Sets the dimensions of the frame
-        f.setVisible(true);
+        f = setupFrame();
         f.addWindowListener(new WindowAdapter() { // Closes the program if close window clicked
             public void windowClosing(WindowEvent e) {
                 f.dispose();
             }
         });
+        setupCanvas();
+    }
+
+    private Frame setupFrame() {
+        final Frame f;
+        f = new Frame("le window");
+        f.add(this); // Adds the Canvas to the Frame
+        f.setLayout(null); // Stops the frame from trying to layout contents
+        f.setSize(400, 400); // Sets the dimensions of the frame
+        f.setVisible(true);
+        return f;
+    }
+
+    private void setupCanvas() {
         setBackground(Color.WHITE); // Sets the Canvas background
         setSize(400, 400);
     }
