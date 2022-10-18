@@ -15,6 +15,7 @@ public class Drawing extends Canvas {
     private final int hR1=100;
     Circle C =new Circle(pC1, cC1, rad);
     Rect R =new Rect(pR1,cR1,wR1,hR1);
+    Square S =new Square(pC1,cR1,hR1,hR1);
 
 
     // constructor
@@ -44,6 +45,7 @@ public class Drawing extends Canvas {
     }
 
     public void paint(Graphics g){
+        S.draw(g);
         C.draw(g);
         R.draw(g);
     }
