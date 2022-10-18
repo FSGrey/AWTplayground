@@ -5,10 +5,16 @@ import java.awt.event.*;
 
 public class Drawing extends Canvas {
     private final Frame f;
-    private final Point pC=new Point(200,200);
-    private final Color cC=new Color(0x992266);
+    private final Point pC1=new Point(200,200);
+    private final Color cC1=new Color(0x992266);
     private final int rad = 50;
-    Circle C =new Circle(pC, cC, rad);
+
+    private final Point pR1=new Point(100,100);
+    private final Color cR1=new Color(0x349922);
+    private final int wR1=50;
+    private final int hR1=100;
+    Circle C =new Circle(pC1, cC1, rad);
+    Rect R =new Rect(pR1,cR1,wR1,hR1);
 
 
     // constructor
@@ -29,5 +35,6 @@ public class Drawing extends Canvas {
 
     public void paint(Graphics g){
         C.draw(g);
-    };
+        R.draw(g);
+    }
 }
